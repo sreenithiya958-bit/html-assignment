@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> responsive webpage </title>
+    <style>
+        h1{
+            font-size: 5vw;
+            text-align: center;
+            color: darkblue;
+        }
+        #para1{
+            font-size: 1.5rem;
+        }
+        #d1{
+            width: 80%;
+            max-width: 600px;
+            border: 2px solid black; 
+            height: 50px; 
+            background-color: blueviolet;
+            font-weight: bolder;
+            text-align: center;
+        }
+        @media(max-width:678px){
+            body{
+                background-color: skyblue;
+            }
+        }
+        @media(min-width:678px){
+            body{
+                background-color: palevioletred;
+            }
+        }
+    </style>
+    <!--3 rd question-->
+    <h1> Responsive Webpage </h1>
+    <!--1 st question-->
+    <div id="d1">
+        <p> box</p>
+    </div>
+    <!-- 2 question-->
+    <div id="para1">
+        <p> REM stand for root em . it caculate the size of font acoording to 
+            root element. for example: set 1.5rem , the default font size of webpage is 16px
+            now 1.5*16px = 24px. it stay consistent across multiple device unless root size is different  </p>
+    </div>
+
+</body>
+</html>
