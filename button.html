@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            background-color: aquamarine;
+            border: 2px solid black;
+            height: 250px;
+            width: 300px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+    <h1> login page </h1>
+    <label> NAME </label><br>
+    <input id="nam" type="text" placeholder="enter your name" onchange="alert('entered name')"><br><br>
+    <label> PASSWORD </label><br>
+    <input id="psw" type="password" placeholder=" enter password " oninput="alert('password entered')" > <br><br>
+    <button id="btn"> submit </button>
+    </div>
+<script>
+    document.getElementById("btn").onclick = function(){
+        alert('button clicked');
+    }
+    document.getElementById("nam").onchange = function(){
+       let nam = document.getElementById("nam").value;
+       alert(nam)
+    }
+</script>
+</body>
+</html>
