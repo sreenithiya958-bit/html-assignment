@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Filter List</title>
+</head>
+<body>
+
+  <input type="text" placeholder="Search..." oninput="filterList()" />
+
+  <ul id="ul1">
+    <li>LG</li>
+    <li>SONY</li>
+    <li>SAMSUNG</li>
+  </ul>
+
+  <script>
+    function filterList() {
+      let input = document.querySelector("input").value.toLowerCase();
+      let listItems = document.querySelectorAll("#ul1 li");
+
+      listItems.forEach((item) => {
+        let text = item.textContent.toLowerCase();
+
+        if (text.includes(input)) {
+          item.style.display = "list-item"; // show
+        } else {
+          item.style.display = "none"; // hide
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>

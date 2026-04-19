@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Cards</title>
+
+  <style>
+    #container {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      border: 1px solid black;
+      padding: 10px;
+      width: 150px;
+      text-align: center;
+      border-radius: 8px;
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2 style="text-align: center;">Movie List</h2>
+  <div id="container"></div>
+
+  <script>
+    // movie data
+    let movies = [
+      {
+        name: "Leo",
+        image: "https://picsum.photos/100"
+      },
+      {
+        name: "Jailer",
+        image:"https://picsum.photos/100"
+      },
+      {
+        name: "RRR",
+        image: "https://picsum.photos/100"
+      }
+    ];
+
+    let container = document.getElementById("container");
+
+    movies.forEach((movie) => {
+      let card = document.createElement("div");
+      card.className = "card";
+
+      let img = document.createElement("img");
+      img.src = movie.image;
+
+      let title = document.createElement("h3");
+      title.textContent = movie.name;
+
+      card.appendChild(img);
+      card.appendChild(title);
+
+      container.appendChild(card);
+    });
+  </script>
+
+</body>
+</html>
