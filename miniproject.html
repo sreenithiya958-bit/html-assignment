@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            display: flex;
+            list-style-type: none;
+            gap: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1> HAPPY SHOPING </h1>
+    <P> CARD:<span id="countcard">(0)</span></P>
+    <script>
+        const items =["MARYGOLD","DARKFANTY","GOODDAY","MOMSMAGIC"]
+        // count 
+        let count = 0
+        let countcard = document.getElementById('countcard');
+        // create ul
+        const ul = document.createElement('ul')
+        document.body.appendChild(ul)
+        //LOOP 
+        for( i = 0; i< items.length; i++){
+            let li = document.createElement('li');
+            li.textContent = items[i] + " ";
+            
+            let btn = document.createElement("button");
+            btn.textContent = 'add';
+            
+            btn.onclick = function(){
+                count = count + 1;
+                countcard.textContent = count;
+            }
+
+            li.appendChild(btn);
+            ul.appendChild(li);
+        }
+    </script>
+</body>
+</html>
